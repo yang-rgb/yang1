@@ -1,0 +1,31 @@
+html{color:#000;background:#FFF}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+
+div{
+	width: 500px;
+	height: 600px;
+	border: 1px solid #000000;
+	margin: 0 auto;
+	margin-top: 50px;
+	position: relative;
+}
+div .hot{
+	width: 120px;
+	height: 120px;
+	background:url(../img/1.png) no-repeat;
+	background-size: cover;
+	/* display: inline-block; */
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+div .price{
+	width: 180px;
+	height: 180px;
+	background: url(../img/2.png) no-repeat;
+	background-size: cover;
+	/* display: inline-block; */
+	position: absolute;
+	left: -7px;
+	top: 251px;
+}
