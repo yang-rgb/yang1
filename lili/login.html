@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="commonCss/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="commonCss/base.css"/>
+		<style>
+			body{
+				height: 650px;
+			}
+			.tops{
+				background: #00a0d8;
+				height: 86px;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			.zhuce{
+				width: 980px;
+				height: 28px;
+				margin: 0 auto;
+				border-bottom: 1px solid #ddd;
+				margin-bottom: 28px;
+				text-align: center;
+			}
+			.zhuce span{
+				height: 56px;
+				line-height: 56px;
+				font-size: 38px;
+				background: white;
+				padding: 0 20px;
+				margin-bottom: 28px;
+			}
+			.content{
+				width: 980px;
+				margin: 75px auto 0;
+			}
+			.content .content-left{
+				float: left;
+				width: 489px;
+				border-right: 1px solid #666;
+			}
+			.content .content-left .content-left-top>i{
+				display: inline-block;
+				margin-left: 145px;
+				width: 70px;
+				height: 70px;
+				background: url(images/app-download.png) no-repeat;
+			}
+			.content .content-left .content-left-top .content-left-top-tu{
+				width: 480px;
+				height: 192px;
+				position: relative;
+			}
+			.content .content-left .content-left-top .content-left-top-tu .tu1{
+				width: 140px;
+				height: 140px;
+				margin: 0 auto;
+				background: #00A0D8;
+			}
+			.content .content-left .content-left-top .content-left-top-tu .tu2{
+				position: absolute;
+				top: -40px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				background: url(images/login/qr-tip.a64967e.png) no-repeat;
+				background-size: cover;
+				opacity: 1;
+				transition: all 0.6s;
+			} 
+			.content .content-left .content-left-top .content-left-top-tu .tu2:hover{
+				opacity: 0;
+			}
+			.content .content-left .content-left-bottom{
+				width: 480px;
+				height: 155px;
+				text-align: center;
+				background: url(images/login/2233login.af9c53d.png) 0 -7px no-repeat;
+			}
+			.content .content-left .content-left-bottom .status-txt{
+				padding-top: 20px;
+				text-align: center;
+				color: #222;
+				font-size: 18px;
+				letter-spacing: 3px;
+				margin-bottom: 5px;
+			}
+			.content .content-left .content-left-bottom .app-link{
+				text-align: center;
+				color: #717171;
+				font-size: 14px;
+				line-height: 20px;
+			}
+			.content .content-left .content-left-bottom .app-link>a{
+				color: #00A0D8;
+			}
+			
+			.content-right{
+				float: left;
+				width: 490px;
+				padding-left: 30px;
+				padding-right: 50px;
+				box-sizing: border-box;
+			}
+			.content-right .content-right-ul li:nth-child(1) input{
+				width: 388px;
+				border: 1px solid #ddd;
+				color: #aaa;
+				font-size: 14px;
+				padding: 10px;
+				height: 18px;
+				border-radius: 5px;
+				outline: 0;
+				margin-bottom: 30px;
+			}
+			.content-right .content-right-ul li:nth-child(2) input{
+				width: 388px;
+				border: 1px solid #ddd;
+				color: #aaa;
+				font-size: 14px;
+				padding: 10px;
+				height: 18px;
+				border-radius: 5px;
+				outline: 0;
+				margin-bottom: 50px;
+			}
+			.content-right .content-right-ul li:nth-child(3) label{
+				font-size: 12px;
+			}
+			.content-right .content-right-ul li:nth-child(3) label span{
+				margin-left: 20px;
+				color: #ccc;
+			}
+			.content-right .content-right-ul li:nth-child(3) label a{
+				color: #00A0D8;
+				float: right;
+				margin-left: 10px;
+			}
+			.content-right .content-right-ul li:nth-child(4) a{
+				display: inline-block;
+				height: 36px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				width: 184px;
+				line-height: 38px;
+				font-size: 14px;
+				text-align: center;
+				cursor: pointer;
+				margin-top: 10px;
+			}
+			.content-right .content-right-ul li:nth-child(4) .btn-login{
+				background-color: #0086B3;
+				color: #fff;
+			}
+			.content-right .content-right-ul li:nth-child(4) .btn-reg{
+				float: right;
+			}
+			.content-right .content-right-ul li:nth-child(4) .btn-login:hover{
+				background-color: #00A1D6;
+			}
+			.content-right .content-right-ul li:nth-child(5){
+				margin-top: 10px;
+			}
+			.content-right .content-right-ul li:nth-child(5) a:before{
+				content: "";
+				display: inline-block;
+				width: 21px;
+				height: 21px;
+				background: url(images/login/下载.png) no-repeat;
+				vertical-align: middle;
+				margin-right: 5px;
+			}
+			.content-right .content-right-ul li:nth-child(5) .weibo:before{
+				background-position: 0 0;
+			}
+			.content-right .content-right-ul li:nth-child(5) .qq:before{
+				background-position: 0 -41px;
+			}
+			.content-right .content-right-ul li:nth-child(5) .qq{
+				margin-left: 20px;
+			}
+			.app-p{
+				text-align: center;
+				font-size: 12px;
+				margin-top: 50px;
+				margin-bottom: 100px;
+			}
+			.app-p a{
+				color: #00A0D8;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="app">
+			<div class="tops">
+				<img src="images/rl_top.35edfde.png" alt="">
+			</div>
+			<div class="zhuce">
+				<span>登录</span>
+			</div>
+			<div class="content clearfix">
+				<div class="content-left">
+					<div class="content-left-top">
+						<i></i>
+						<div class="content-left-top-tu">
+							<div class="tu1"></div>
+							<div class="tu2"></div>
+						</div>
+					</div>
+					<div class="content-left-bottom">
+						<p class="status-txt">二维码已失效</p>
+						<p class="app-link">
+							请使用 
+							<a href="javascript:;" target="_blank">
+								哔哩哔哩客户端
+							</a>
+							<br>扫码登录<br>或扫码下载APP
+						</p>
+					</div>
+				</div>
+				<div class="content-right">
+					<ul class="content-right-ul">
+						<li>
+							<input type="text" placeholder="你的手机号/邮箱" maxlength="50">
+						</li>
+						<li>
+							<input type="password" placeholder="密码">
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" checked="checked">
+													记住我
+									<span>不是自己的电脑上不要勾选此项</span>
+									<a target="_blank" href="javascript:;" class="forget-password">忘记密码?</a>
+									<a target="_blank" href="javascript:;" class="not-checkout">无法验证?</a>
+							</label>
+						</li>
+						<li>
+							<a class="btn-login">登录</a>
+							<a class="btn-reg" href="zhuce.html">注册</a>
+						</li>
+						<li>
+							<a class="weibo">微博账号登录</a>
+							<a class="qq">QQ账号登录</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		
+			<p class="app-p">
+				登录即代表你同意
+				<a target="_blank" href="javascript:;">用户协议</a>
+				和
+				<a target="_blank" href="javascript:;">隐私政策</a>
+			</p>
+		</div>
+	
+	</body>
+	<script type="text/javascript">
+		
+	</script>
+</html>

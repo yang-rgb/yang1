@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../commonCss/base.css"/>
+		<style type="text/css">
+			#app{
+				width: 520px;
+				height: 260px;
+				box-sizing: border-box;
+				padding: 20px 0 20px 20px;
+				box-shadow: 1px 1px 3px #ccc;
+				background: white;
+			}
+			#app .app-left{
+				width: 310px;
+				float: left;
+				border-right:1px solid #ccc;
+			}
+			#app .app-left a{
+				display: inline-block;
+				margin-right: 10px;
+				position: relative;
+				margin-bottom: 10px;
+			}
+			#app .app-left .a1 .a-img div{
+				width: 136px;
+				height: 77px;
+				background: url(../images/manhua/manhua1.jpg@272w) no-repeat;
+				background-size: cover;
+			}
+			#app .app-left .a2 .a-img div{
+				width: 136px;
+				height: 77px;
+				background: url(../images/manhua/manhua2.png@272w) no-repeat;
+				background-size: cover;
+			}
+			#app .app-left .a3 .a-img div{
+				width: 136px;
+				height: 77px;
+				background: url(../images/manhua/manhua3.jpg@272w) no-repeat;
+				background-size: cover;
+			}
+			#app .app-left .a4 .a-img div{
+				width: 136px;
+				height: 77px;
+				background: url(../images/manhua/manhua4.jpg@272w) no-repeat;
+				background-size: cover;
+			}
+			#app .app-left a .a-img div{
+				margin-bottom: 5px;
+			}
+			#app .app-left a .a-img span{
+				display: inline-block;
+				color: #000000;
+				font-size: 14px;
+				width: 136px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+			}
+			#app .app-left a .a-img div:before{
+				content: "";
+				display: none;
+				width: 136px;
+				height: 77px;
+				background: transparent;
+				position: absolute;
+				top: -10px;
+				left: -10px;
+				border-width: 12px 10px 25px 10px;
+				border-color: #f4f4f4;
+				border-style: solid;
+				border-radius: 5px;
+				z-index: -1;
+			} 
+			#app .app-left a:hover .a-img :before{
+				display: block;
+			}
+			
+			#app .app-right,
+			#app .app-right .all{
+				width: 189px;
+				float: right;
+				counter-reset: section;
+				position: relative;
+			}
+			#app .app-right .all h3{
+				font-size: 20px;
+				margin: 0 0 5px 10px;
+			}
+			#app .app-right .all a{
+				display: block;
+				width: 100%;
+				padding: 5px 0 5px 10px;
+				font-size: 14px;
+				color: #000000;
+				box-sizing: border-box;
+			}
+			#app .app-right .all a:before{
+				counter-increment: section;
+				content:counter(section);
+				letter-spacing: 10px;
+				color: #cf9870;	
+			}
+			#app .app-right .all a:hover{
+				background: #ccc;
+			}
+			#app .app-right .app-img{
+				width: 150px;
+				height: 200px;
+				border-radius: 5px;
+				position: absolute;
+				top: 0;
+				left: 160px;
+				background: url(../images/manhua/man1.jpg@320w);
+				background-size: contain;
+				box-shadow: 1px 5px 10px #ccc;
+				display: none;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!-- <img src="../images/manhua/man1.jpg@320w" > -->
+		<div id="app">
+			<div class="app-left">
+				<a class="a1" href="javascript:;" target="_blank" title="鬼灭之刃">
+					<div class="a-img">
+						<div></div>
+						<span>鬼灭之刃</span>
+					</div>
+				</a>
+				<a class="a2" href="javascript:;" target="_blank" title="石纪元(Dr.Stone)">
+					<div class="a-img">
+						<div></div>
+						<span>石纪元(Dr.Stone)</span>
+					</div>
+				</a>
+				<a class="a3" href="javascript:;" target="_blank" title="一拳超人">
+					<div class="a-img">
+						<div></div>
+						<span>一拳超人</span>
+					</div>
+				</a>
+				<a class="a4" href="javascript:;" target="_blank" title="刀剑神域 Alicization篇">
+					<div class="a-img">
+						<div></div>
+						<span>刀剑神域 Alicization篇</span>
+					</div>
+				</a>
+			</div>
+			<div class="app-right">
+				<div class="all">
+					<h3>人气漫画</h3>
+					<a href="javascript:;" title="鬼灭之刃" target="_blank">鬼灭之刃</a>
+					<a href="javascript:;" title="石纪元(Dr.Stone)" target="_blank">石纪元(Dr.Stone)</a>
+					<a href="javascript:;" title="一拳超人" target="_blank">一拳超人</a>
+					<a href="javascript:;" title="租借女友" target="_blank">租借女友</a>
+					<a href="javascript:;" title="五等分的新娘" target="_blank">五等分的新娘</a>
+					<a href="javascript:;" title="约定的梦幻岛" target="_blank">约定的梦幻岛</a>
+				</div>
+			
+				<div class="app-img"></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+				var arr=[0,1,2,3].sort(function(){ return 0.5-Math.random()});
+				var arrData=[
+					{title:"鬼灭之刃",url:"url(../images/manhua/manhua1.jpg@272w)"},
+					{title:"石纪元(Dr.Stone)",url:"url(../images/manhua/manhua2.png@272w)"},
+					{title:"一拳超人",url:"url(../images/manhua/manhua3.jpg@272w)"},
+					{title:"刀剑神域 Alicization篇",url:"url(../images/manhua/manhua4.jpg@272w)"}
+				]
+				var all=document.querySelectorAll("#app .app-left a");
+				var div=document.querySelectorAll("#app .app-left a .a-img div");
+				var span=document.querySelectorAll("#app .app-left a .a-img span");
+				for(var i=0;i<all.length;i++){
+					all[i].title=arrData[arr[i]].title;
+					div[i].style.backgroundImage=arrData[arr[i]].url;
+					span[i].innerText=arrData[arr[i]].title;
+				}
+				
+			
+		var img=document.querySelector("#app .app-right .app-img");
+		var aAll=document.querySelectorAll("#app .app-right .all a");
+		
+		var aAllimg=[
+			"url(../images/manhua/man1.jpg@320w)",
+			"url(../images/manhua/man2.jpg@320w)",
+			"url(../images/manhua/man3.jpg@320w)",
+			"url(../images/manhua/man4.jpg@320w)",
+			"url(../images/manhua/man5.jpg@320w)",
+			"url(../images/manhua/man6.jpg@320w)"
+		]
+		
+		for(var i=0;i<aAll.length;i++){
+			aAll[i].index=i;
+			aAll[i].onmouseover=function(){
+				img.style.display="block";
+				img.style.backgroundImage=aAllimg[this.index];	
+			}
+			aAll[i].onmouseout=function(){
+				img.style.display="none";
+			}
+			
+		}	
+			}	
+		</script>
+	</body>
+</html>

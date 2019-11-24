@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="commonCss/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="commonCss/base.css"/>
+		<style>
+			body{
+				height: 650px;
+			}
+			.tops{
+				background: #00a0d8;
+				height: 86px;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			.zhuce{
+				width: 980px;
+				height: 28px;
+				margin: 0 auto;
+				border-bottom: 1px solid #ddd;
+				margin-bottom: 28px;
+				text-align: center;
+			}
+			.zhuce span{
+				height: 56px;
+				line-height: 56px;
+				font-size: 38px;
+				background: white;
+				padding: 0 20px;
+				margin-bottom: 28px;
+			}
+			.content{
+				margin-top: 75px;
+			}
+			.content-group{
+				width: 420px;
+				margin: 0 auto;
+				font-size: 14px;
+				position: relative;
+			}
+			/* input::-webkit-input-placeholder {
+				   color: red;
+				} */
+			/* input:-moz-placeholder {
+			    color: #C0C0C0;
+			}
+			input::-moz-placeholder {
+			    color: #C0C0C0;
+			    opacity: 1;
+			}
+			input:-ms-input-placeholder {
+			    color: #C0C0C0;
+			} */
+			.content-group .content-group-ni{
+				width: 100%;
+				height: 40px;
+				line-height: 40px;
+				border-radius: 5px;
+				outline:0;
+				border: 1px solid #dcdfe6;
+				padding: 15px;
+				box-sizing: border-box;	
+			}
+			.content-group .content-group-ni:hover{
+				border: 1px solid #B8C0CC;
+			}
+			.content-group .content-group-ni:focus{
+				border: 1px solid #00A0D8;
+			}
+			.content-group .error-message{
+				width: 200px;
+				font-size: 12px;
+				color: red;
+				position: absolute;
+				top: 12px;
+				left: 435px;;
+			}
+			.mima{
+				width: 420px;
+				height: 40px;
+				margin: 0 auto;
+				text-align: left;
+				line-height: 40px;
+				visibility: hidden;
+			}
+			.mimacolor{
+				width: 30px;
+				height: 5px;
+				border-radius: 5px;
+				background-color: red;
+				display: inline-block;
+				visibility: hidden;
+			}
+			.mima>p{
+				display: inline-block;
+				font-weight: 700;
+			}
+			.mima .mimatiao{
+				display: inline-block;
+			}
+			 .mima .mimatiao .mimacolor{
+				 margin:0 10px;
+				 vertical-align: middle;
+			 }
+			 .mima .mimatiao>span{
+				 margin-left: 10px;
+			 }
+			 .content-group2{
+				 margin-bottom: 40px;
+			 }
+			 .content-input2{
+				float: left;
+				 height: 40px;
+				 width: 290px;
+				 line-height: 40px;
+				 border-radius: 0 5px 5px 0;
+				 outline:0;
+				 border: 1px solid #dcdfe6;
+				 padding: 15px;
+				 box-sizing: border-box;
+				
+			 }
+			 .content-group-left{
+				float: left;
+				position: relative;
+			 }
+			 .content-group-left .group-left-cont{
+				 width: 130px;
+				height: 40px;
+				position: relative;
+				cursor: pointer;
+			 }
+			 .content-group-left .group-left-cont>input{
+				 
+				 
+			 }
+			 .content-group-left .group-left-cont>span>i{
+				 display: inline-block;
+				 position: absolute;
+				 top: 10px;
+				 right: 9px;
+				 width: 20px;
+				 height: 20px;
+				 background: url(images/icons.png) no-repeat;
+				 background-position: -661px -88px;
+				 transform: rotate(180deg);
+			 } 
+			 .content-group-left .group-left-cont input{
+				width: 100%;
+				height: 40px;
+				line-height: 40px;
+				border-radius: 5px 0 0 5px;
+				outline:0;
+				border: 1px solid #dcdfe6;
+				padding: 15px 30px 15px 15px ;
+				border-right: 0;
+				box-sizing: border-box;
+				cursor: pointer;
+			 }
+			 .content-input2:hover{
+			 	border-color: #B8C0CC;
+			 }
+			  .content-input2:focus{
+			 	border-color:#00A0D8;
+			 }
+			 .content-group3{
+				 margin-top: 40px;
+			 }
+			 .content-group3 .group-left-cont3>input{
+				 width: 100%;
+				 height: 40px;
+				 line-height: 40px;
+				 border-radius: 5px;
+				 outline:0;
+				 border: 1px solid #dcdfe6;
+				 padding: 15px;
+				 box-sizing: border-box;	
+			 }
+			 .content-group3 .group-left-cont3>input:hover{
+			 	border: 1px solid #B8C0CC;
+			 }
+			  .content-group3 .group-left-cont3>input:focus{
+			 	border: 1px solid #00A0D8;
+			 }
+			 .group-left-contblock2{
+				 width: 130px;
+				 height: 36px;
+				 color: #fff;
+				 background-color: #00a1d6;
+				 border: 0;
+				 position: absolute;
+				 top: 2px;
+				 right: 2px;
+				 border-radius: 5px;
+			 }
+			 .content-bock{
+				width: 420px;
+				height: 40px;
+				line-height: 40px;
+				margin: 0 auto;
+				font-size: 12px;
+			 }
+			 .content-bock a{
+				 color: #0086B3;
+				
+			 }
+			 .content-bock span{
+				 display: inline-block;
+				 width: 14px;
+				 height: 14px;
+				 background: url(svg.svg);
+				 background-repeat: no-repeat;
+				 background-size: 14px 14px;
+				 background-position: 50%;
+				 margin-top: -3px;
+				 vertical-align: middle;
+				  cursor: pointer;
+			 }
+			 .content-bock label{
+				cursor: pointer; 
+			 }
+			 .content-bock label>input{
+				 vertical-align: middle;
+				 margin-bottom: 2px;
+				 display: none;
+			 }
+			 .buttonsut{
+				width: 420px;
+				height: 40px;
+				line-height: 40px;
+				margin: 0 auto;
+				font-size: 12px; 
+			 }
+			 .buttonsut button{
+				 width: 100%;
+				 height: 100%;
+				 font-size: 18px;
+				 background: #eee;
+				 border: 1px solid #dcdfe6;
+				 color: #999;
+				 cursor: no-drop;
+				 outline: 0;
+			 }
+			 .register-hidden-gruop{
+				 width: 420px;
+				 height: 40px;
+				 margin: 0 auto;
+				 line-height: 40px;
+				 text-align: right;
+				 font-size: 12px;
+			 }
+			 .register-hidden-gruop a{
+				color: #00A0D8; 
+			 }
+			 .group-left-contblock{
+				 width: 130px;
+				 height: 275px;
+				 cursor: pointer;
+				 box-shadow: 1px 1px 3px #eee;
+				 overflow: auto;
+				 position: absolute;
+				 top: 45px;
+				 left: 0;
+				 z-index: 2;
+				 background-color: white;
+				 display: none;
+			 }
+			  .group-left-contblock::-webkit-scrollbar{
+				  width: 8px;
+				  height: 8px;
+			  }
+			  .group-left-contblock::-webkit-scrollbar-thumb{
+			  		border-radius: 5px;
+					background-color: #eee;
+			  }
+			 
+			 .group-left-contblock ul li{
+				width: 100%;
+				height: 34px;
+				line-height: 34px;
+				padding-left: 10px;
+				box-sizing: border-box;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+
+			 }
+			 .group-left-contblock ul li:hover{
+				 background-color: #eee;
+				 
+			 	}
+			 
+		</style>
+	</head>
+	<body>
+		<div class="app">
+			<div class="tops">
+				<img src="images/rl_top.35edfde.png" alt="">
+			</div>
+			<div class="zhuce">
+				<span>注册</span>
+			</div>
+			<div class="content">
+				<form action="" method="">
+					<div class="content-group">
+						<input type="text" placeholder="昵称" class="content-group-ni"/>
+						<p class="error-message error-message1"></p>
+					</div>
+					<div class="mima">
+						<p>安全系数</p>
+						<div class="mimatiao">
+							<div class="mimacolor"></div>
+							<div class="mimacolor"></div>
+							<div class="mimacolor"></div>
+							<div class="mimacolor"></div>
+							<div class="mimacolor"></div>
+							<span>弱</span>
+						</div>
+					</div>
+					<div class="content-group content-group2">
+						<input type="password" placeholder="密码（6-16个字符组成，区分大小写）" class="content-group-ni"/>
+						<p class="error-message error-message2"></p>
+					</div>
+					<div class="content-group clearfix">
+						<div class="content-group-left">
+							<div class="group-left-cont">
+								<input type="text" readonly="readonly" placeholder="请选择国家" class="el-input__innerguo">
+								<span><i></i></span>
+							</div>
+							<div class="group-left-contblock">
+								<ul>
+									<li>中国大陆</li>
+									<li>中国香港特别行政区</li>
+									<li>中国澳门特别行政区</li>
+									<li>中国台湾</li>
+									<li>美国</li>
+									<li>比利时</li>
+									<li>澳大利亚</li>
+									<li>法国</li>
+									<li>加拿大</li>
+									<li>日本</li>
+									<li>新加坡</li>
+									<li>韩国</li>
+									<li>马来西亚</li>
+									<li>英国</li>
+									<li>意大利</li>
+								</ul>
+							</div>
+						</div>
+						<input type="text" placeholder="填写常用手机号" class="content-input2"/>
+						<!-- <p class="error-message">填写常用手机号</p> -->
+					</div>
+					<div class="content-group content-group3">
+							<div class="group-left-cont3">
+								<input type="text" readonly="readonly" placeholder="请输入短信验证码" class="el-input__inner">
+							</div>
+							<button type="button" class="group-left-contblock2">
+								<span>点击获取</span>
+							</button> 
+							
+						<!-- <p class="error-message">填写常用手机号</p> -->
+					</div>
+					<div class="content-bock">
+						<label >
+							<span></span>
+							<input type="checkbox" class="xuanzhong"/>
+							我已同意
+						</label>
+						<a href="javascript:;">
+							《哔哩哔哩弹幕网用户使用协议》
+						</a>
+						和
+						<a href="javascript:;">
+							《哔哩哔哩隐私政策》
+						</a>
+					</div>
+					<div class="buttonsut">
+						<button type="button">注册</button>
+					</div>
+					<div class="register-hidden-gruop">
+						<a href="javascript:;">已有账号，直接登录&gt;</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	
+	</body>
+	<script type="text/javascript">
+		var contentGroupNi=document.querySelector(".content-group-ni");
+		var errorMessage1=document.querySelector(".error-message1");
+		contentGroupNi.onblur=function(){
+			if(this.value==""){
+				errorMessage1.innerText="输入用户名";
+			}else{
+				errorMessage1.innerText="";
+			}
+		}
+		
+		var contentGroupNi2=document.querySelector(".content-group2>input");
+		var errorMessage2=document.querySelector(".error-message2");
+		var mima=document.querySelector(".mima");
+		var mimaColor=document.querySelectorAll(".mimacolor");
+		var mimaSpanColor=document.querySelector(".mima .mimatiao>span");
+		var fengshu;
+		var color=["red","#ff7979","#f9ca24","#badc58","#6ab04c"];
+		contentGroupNi2.oninput=function(){
+			errorMessage2.innerText="";
+			var reg1=/[0-9]+/;
+			var reg2=/[a-z]+/;
+			var reg3=/[A-Z]+/;
+			var reg4=/[^A-z0-9]+/;
+			var v1=0;
+			var v2=0;
+			var v3=0;
+			var v4=0;
+			var v5=0;
+			var jibie=0;
+			if(this.value.length>16){
+				errorMessage2.innerText="字符大于16";
+			}
+		
+			if(this.value.length>=6&&this.value.length<=16){
+				mima.style.visibility="visible";
+				if(reg1.test(this.value)){
+					v1=1;
+				}else{v1=0}
+				if(reg2.test(this.value)){
+					v2=1;
+				}else{v2=0}
+				if(reg3.test(this.value)){
+					v3=1;
+				}else{v3=0}
+				if(reg4.test(this.value)){
+					v4=1;
+				}else{v4=0}
+				if(this.value.length>=12){
+					v5=1;
+				}else{v5=0}
+				 switch (v1+v2+v3+v4+v5){
+					 case 1: jibie=1; break;
+					 case 2: jibie=2; break;
+					 case 3: jibie=3; break;
+					 case 4: jibie=4; break;
+					 case 5: jibie=5; break;
+				 }
+
+				 for(var i=0;i<mimaColor.length;i++){
+					 mimaColor[i].style.visibility="hidden";
+					 mimaColor[i].style.backgroundColor=color[i];
+				 }
+				 for(var i=0;i<jibie;i++){
+					 mimaColor[i].style.visibility="visible";
+				 }
+				  mimaSpanColor.style.color=color[jibie-1];
+				  if(jibie==1){
+					  mimaSpanColor.innerText="弱";
+				  }
+				  if(jibie>=2 && jibie<=3){
+				  	 mimaSpanColor.innerText="中";
+				  }
+				  if(jibie>4){
+				  	 mimaSpanColor.innerText="安全";
+				  }
+				
+			}
+		}
+		contentGroupNi2.onblur=function(){
+			if(this.value.length<6){
+				errorMessage2.innerText="字符小于6";
+			}
+		}
+		
+		var contblock=document.querySelector(".group-left-contblock");
+		var leftCont=document.querySelector(".content-group-left .group-left-cont");
+		var leftContI=document.querySelector(".content-group-left .group-left-cont>span>i");
+		var leftContIchec=true;
+		leftCont.onclick=function(){
+			if(leftContIchec){
+				leftContI.style.transform="rotate(0deg)";
+				contblock.style.display="block";
+				leftContIchec=false;
+			}else{
+				leftContIchec=true;
+				contblock.style.display="none";
+				leftContI.style=0;
+			}
+		}
+		
+		
+		var xuanzhong=document.querySelector(".xuanzhong");
+		var bockSpan=document.querySelector(".content-bock span");
+		var bockButton=document.querySelector(".buttonsut button");
+		var check=true;
+		xuanzhong.onclick=function(e){
+			e=e||event;
+			e.preventDefault();
+			if(check){
+				bockSpan.style.backgroundImage=" url(svg2.svg)";
+				bockButton.style.backgroundColor="#0086B3";
+				bockButton.style.color="#fff";
+				bockButton.style.cursor="pointer";
+				bockButton.style.boder=0;
+				check=false;
+				bockButton.onmouseenter=function(){
+					bockButton.style.backgroundColor="#00A1D6";
+				}
+				bockButton.onmouseleave=function(){
+					bockButton.style.backgroundColor="#0086B3";
+				}
+			}else{
+				bockSpan.style.backgroundImage=" url(svg.svg)";
+				bockButton.style=0;
+				bockButton.onmouseenter=null;
+				bockButton.onmouseleave=null;
+				check=true;
+			}
+		}
+		
+		
+		var  leftContInput=document.querySelector(".content-group-left .group-left-cont>input");
+		var  leftContLi=document.querySelectorAll(".group-left-contblock ul li");
+		for(var i=0;i<leftContLi.length;i++){
+			(function(i){
+				leftContLi[i].onclick=function(e){
+					e=e||event;
+					e.preventDefault();
+					for(var j=0;j<leftContLi.length;j++){
+						leftContLi[j].style.color="#000";
+					}
+					this.style.color="#00A1D6";
+					leftContInput.value=this.innerText;
+				}
+			})(i)
+		}
+		
+		
+	</script>
+</html>
