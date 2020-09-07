@@ -22,7 +22,6 @@
 				  <el-submenu index="2">
 				    <template slot="title">软件产品</template>
 				    <el-menu-item index="2-1">404</el-menu-item>
-				    <el-menu-item index="2-2">简历</el-menu-item>
 				  </el-submenu>
 				  <el-menu-item index="3">新闻动态</el-menu-item>
 				  <el-menu-item index="4">公司介绍</el-menu-item>
@@ -48,7 +47,6 @@ export default {
 	  router:{
 		  "1":'/home',
 		  "2-1":'/bug',
-		  "2-2":'/jili',
 		  "3":'/News',
 		  "4":'/Introduce',
 		  "5":'/company' 
@@ -71,22 +69,29 @@ export default {
 		  this.zindex=9;
 	  },
 		handleSelect(key, keyPath) {
+			
 			this.get_bodyHeight()
 			if(this.$route.path==this.router[key]) return;
 			window.sessionStorage.setItem('activeIndex',key)
 			 this.$router.push(this.router[key])
+			 if(this.screenWidth<768){
+				 this.show3=false;
+			 }
 		},
 		get_bodyHeight () {
 			
-			window.onresize =this.throttle(()=>{
+			
+			window.addEventListener('resize',this.throttle(()=>{
 				this.screenWidth = document.documentElement.clientWidth;
-				
+				console.log(8989)
 				 this.zindex=this.screenWidth>768?9:-1;
 				 this.show3=this.screenWidth>768?true:false;
 				
 				this.hor=this.screenWidth>768?'horizontal':'vertical';
 			
-			},20)
+			},20))
+			
+			
 			
 		},
 		horfun(){

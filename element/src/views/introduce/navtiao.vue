@@ -52,12 +52,14 @@
 		height: 30px;
 		background-color: #ccc;
 		position: relative;
+		border-radius: 5px;
 	}
 	.nav>span{
 		display: inline-block;
 		width: 0%;
 		height: 30px;
 		background-color: red;
+		border-radius: 5px 0 0 5px;
 	}
 	.tishi{
 		width: 50px;

@@ -26,7 +26,8 @@ export default {
   components: {
 	  HelloTop,
 		navItem,
-		myFooter
+		myFooter,
+		
   },
   mounted(){
 	
@@ -40,7 +41,9 @@ export default {
 <style>	
 @import url("./assets/css/animate.css");
 @import url("./assets/css/base.css");
-
+	#app{
+		overflow: hidden;
+	}
 	.width100{
 		max-width: 100%;
 	}

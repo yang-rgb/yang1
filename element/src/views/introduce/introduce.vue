@@ -16,15 +16,15 @@
 		
 			<el-row :gutter="30" class="u-flex-fa u-flex-wrap">
 				<el-col :xs="24" :sm="12" :md="12">
-			<div ref="Tright">
+			<div class="padding" ref="Tright">
 				<navt wid="40%" til="BBBB" bgcolor="red" />
 				<navt wid="4%" til="YYYY" bgcolor="#ff5500" />
 				<navt wid="80%" til="AAAA" bgcolor="#3A8EE6" />
 				<navt wid="20%" til="TTTT" bgcolor="#e60ae6" />
 			</div>
 			</el-col>
-			<el-col :xs="24" :sm="12" :md="12">
-				<Collapse ref="Tleft"/>
+			<el-col  :xs="24" :sm="12" :md="12">
+				<Collapse class="padding" ref="Tleft"/>
 			</el-col>
 			</el-row>
 		
@@ -82,6 +82,10 @@
 </script>
 
 <style scoped="scoped">
+	.padding{
+		padding: 0 10px;
+		box-sizing: border-box;
+	}
 	.chan{
 		padding: 60px 30px;
 		color: #9f9f9f;
